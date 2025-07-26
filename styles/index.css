@@ -150,7 +150,7 @@
     grid-template-columns: repeat(4,1fr);
 }
 /*flower section related styles*/
-.flower-plants-section {
+/* .flower-plants-section {
   display: flex;
   flex-wrap: wrap;
   max-width: 1140px;
@@ -234,10 +234,102 @@
 .picture{
     display: grid;
     gap: 25px;
+} 
+ .flower-lover {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.image-column {
+  flex: 1;
+  position: relative;
+  max-width: 500px;
+}
+
+.image-wrapper {
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 10px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.image-wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(255, 100, 0, 0.4), transparent);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100px;
+  z-index: 2;
+}
+
+/* Text column */
+.text-column {
+  flex: 1;
+  max-width: 600px;
+}
+
+.text-column h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.text-column ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.text-column li {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flower-lover {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-column ul {
+    text-align: left;
+  }
+
+  
+ .badge {
+  position: relative;
+  top: 5px;
+  right: 5px;
+  width: 46px; /* smaller size */
+  z-index: 5;
+}
 }
 
 /* Deals Grid */
-.deals-grid {
+/* .deals-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -266,7 +358,7 @@
 }
 
 /* Overlay for the text and link */
-.deal-overlay {
+/* .deal-overlay {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -293,71 +385,7 @@
     color: white;
     text-decoration: none;
     font-size: 0.9em;
-}
-
-.join-section {
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  position: relative;
-  color: white;
-  font-family: sans-serif;
-}
-
-.top-bar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 15px 30px;
-}
-
-
-.overlay {
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 600px;
-}
-
-.overlay h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.subscribe-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.subscribe-form input[type="email"] {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px 0 0 5px;
-  width: 300px;
-  max-width: 100%;
-}
-
-.subscribe-form button {
-  padding: 10px 20px;
-  background-color: #f15a24;
-  color: white;
-  border: none;
-  border-radius: 0 5px 5px 0;
-  font-weight: bold;
-  cursor: pointer;
- 
-}
-
-.subscribe-form button:hover {
-  background-color: #d94e1f;
-}
-
+} */ */
 
 
 /* --- Footer Styles --- */
@@ -374,12 +402,27 @@ footer {
 }
 
 .footer-left,
-.footer-middle,
-.footer-right {
+.footer-middle
+ {
     margin-bottom: 30px;
     width: 100%;
     text-align: center;
 }
+.footer-right{
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: start;  
+
+}
+.footer-right .image {
+    width: 32px;
+
+}
+
 
 .logo-description {
     margin-bottom: 20px;
@@ -425,14 +468,6 @@ footer {
 }
 
 
-
-.footer-right .social-icons {
-    display: grid;
-   
-}
-
-
-
 /*responsive media query*/
 @media screen and (max-width: 430px) {
     .banner,
@@ -457,3 +492,155 @@ footer {
      }
 }
   
+/* Hero Section */
+.hero {
+  background-image: url("https://i.ibb.co/2YkvLR17/news-letter-bg.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat ;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(196, 4, 4, 0.4); /* semi-transparent overlay */
+}
+
+.content {
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.content h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.subscribe-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #f55c1a;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #e24c0d;
+}
+
+/* Section basics */
+.deals-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-title .highlight {
+  color: orange;
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 2-column layout */
+.deals-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-column .full-height {
+  height: 100%;
+}
+
+/* Card styling */
+.deal-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.deal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.deal-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.deal-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.shop-btn {
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Background images */
+.image1 {
+  background-image: url('assets/flower1.jpg');
+}
+
+.image2 {
+  background-image: url('assets/flower2.jpg');
+}
+
+.image3 {
+  background-image: url('assets/flower3.jpg');
+  min-height: 100%;
+}
